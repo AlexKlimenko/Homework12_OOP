@@ -55,8 +55,8 @@ const comp = new Component("span");
 
 //Task 2
 class Component2 {
-  constructor(tagName) {
-    this.tagName = tagName || "div";
+  constructor(tagName = "div") {
+    this.tagName = tagName;
     this.node = document.createElement(tagName);
   }
   setText(text) {
@@ -129,15 +129,16 @@ class PlanetWithSatellite extends Planet {
   }
   getSatelliteName() {
     const origRes = super.getName();
-    return `${origRes} The satellite: ${this.satelliteName.join(", ")}`;
+    return `${origRes} The satellite: ${this.satelliteName.join(", ") ||
+      `${this.name} has not any satellite`}`;
   }
 }
 
 let earth = new Planet("Earth");
 // console.log(earth.getName());
 let mars = new PlanetWithSatellite("Mars", "Deimos", "Phobos");
-// console.log(mars.getName());
-// console.log(mars.getSatelliteName());
+console.log(mars.getName());
+console.log(mars.getSatelliteName());
 
 //Task 2 ES6
 class Building {
