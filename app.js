@@ -137,8 +137,8 @@ class PlanetWithSatellite extends Planet {
 let earth = new Planet("Earth");
 // console.log(earth.getName());
 let mars = new PlanetWithSatellite("Mars", "Deimos", "Phobos");
-console.log(mars.getName());
-console.log(mars.getSatelliteName());
+// console.log(mars.getName());
+// console.log(mars.getSatelliteName());
 
 //Task 2 ES6
 class Building {
